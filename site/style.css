@@ -2,36 +2,100 @@ html, body
 {
     font-family: 'Content', serif;
     text-align: justify;
+    color: #DDDDDD;
 }
 
 body
 {
     width: 65%;
     margin-left: 17.5%;
+    background: url('img/bg.png') repeat;
 }
 
 header
 {
     text-align: center;
+    font-size: 1.4em;
+}
+
+header img
+{
+    margin-bottom: 30px;
+    display: inline-block;
 }
 
 nav
 {
     text-align: center;
     font-family: 'Title', sans-serif;
+    font-size: 0.9em;
+    z-index: 10;
+    position: relative;
+    top: 20px;
 }
 
 nav ul
 {
     background: #CCCCCC;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 nav li
 {
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: #494949;
+}
+
+nav a:hover
+{
+    animation: hoverLink 0.2s linear;
+    text-shadow: 0px 0px 5px #000000;
+}
+
+
+@keyframes hoverLink
+{
+	0%		{text-shadow: 0px 0px 1px #CCCCCC;}
+	100%	{text-shadow: 0px 0px 5px #000000;}
+}
+
+section
+{
+    z-index: 1;
+    padding-top: 32px;
+    padding-left: 78px;
+    padding-right: 78px;
+    padding-bottom: 144px;
+    background: url('img/leftW.png') repeat-y, url('img/rightW.png') repeat-y right, url('img/transition.png') repeat-x bottom, url('img/wall.png') repeat 20px 80px;
+    margin-bottom: -16px;
+}
+
+section h1
+{
+    text-align: right;
+    margin-right: 24px;
+    position: relative;
+    bottom: 15px;
+}
+
+footer
+{
+    background: #CCCCCC;
+    color: #202020;
+    text-align: center;
+    position: relative;
+    top: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 64px;
 }
 
 @font-face
