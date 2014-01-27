@@ -1,0 +1,50 @@
+html, body
+{
+    font-family: 'Content', serif;
+}
+
+body
+{
+    width: 65%;
+    margin-left: 17.5%;
+}
+
+header
+{
+    
+}
+
+nav
+{
+    text-align: center;
+    font-family: 'Title', sans-serif;
+}
+
+nav ul
+{
+    background: #CCCCCC;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+@font-face
+{
+    font-family: 'Content';
+    src: url('font/Georgia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Title';
+    src: url('font/TrebuchetMSBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
