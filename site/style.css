@@ -129,6 +129,11 @@ section
     background: url('img/leftW.png') repeat-y, url('img/rightW.png') repeat-y right, url('img/transition.png') repeat-x bottom;
 }
 
+iframe
+{
+    margin: 10px;
+}
+
 #section_fin
 {
     background: url('img/leftW.png') repeat-y, url('img/rightW.png') repeat-y right;
