@@ -211,24 +211,24 @@ int main(int, char const**)
     
     // Musiques
     sf::Music themeSong;
-    if(!themeSong.openFromFile(resourcePath() + "main_theme.ogg"))
+    if(!themeSong.openFromFile(resourcePath() + "audio/main_theme.ogg"))
     {
         return EXIT_FAILURE;
     }
     sf::Music menuSong;
-    if(!menuSong.openFromFile(resourcePath() + "menu_song.ogg"))
+    if(!menuSong.openFromFile(resourcePath() + "audio/menu_song.ogg"))
     {
         return EXIT_FAILURE;
     }
     sf::Music menuLoop;
-    if(!menuLoop.openFromFile(resourcePath() + "menu_song2.ogg"))
+    if(!menuLoop.openFromFile(resourcePath() + "audio/menu_song2.ogg"))
     {
         return EXIT_FAILURE;
     }
         
     // Sons
     sf::SoundBuffer planeSoundBuffer;
-    if(!planeSoundBuffer.loadFromFile(resourcePath() + "plane_sound.ogg"))
+    if(!planeSoundBuffer.loadFromFile(resourcePath() + "audio/plane_sound.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -236,7 +236,7 @@ int main(int, char const**)
     planeSound.setBuffer(planeSoundBuffer);
     
     sf::SoundBuffer pauseSoundBuffer;
-    if(!pauseSoundBuffer.loadFromFile(resourcePath() + "pause.ogg"))
+    if(!pauseSoundBuffer.loadFromFile(resourcePath() + "audio/pause.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -244,7 +244,7 @@ int main(int, char const**)
     pauseSound.setBuffer(pauseSoundBuffer);
     
     sf::SoundBuffer playSoundBuffer;
-    if(!playSoundBuffer.loadFromFile(resourcePath() + "play.ogg"))
+    if(!playSoundBuffer.loadFromFile(resourcePath() + "audio/play.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -255,7 +255,7 @@ int main(int, char const**)
     pauseSound.setVolume(800);
     
     sf::SoundBuffer deadSoundBuffer;
-    if(!deadSoundBuffer.loadFromFile(resourcePath() + "dead_sound.ogg"))
+    if(!deadSoundBuffer.loadFromFile(resourcePath() + "audio/dead_sound.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -263,7 +263,7 @@ int main(int, char const**)
     deadSound.setBuffer(deadSoundBuffer);
     
     sf::SoundBuffer menuSoundBuffer;
-    if(!menuSoundBuffer.loadFromFile(resourcePath() + "menu_sound.ogg"))
+    if(!menuSoundBuffer.loadFromFile(resourcePath() + "audio/menu_sound.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -272,7 +272,7 @@ int main(int, char const**)
     
     // Chargement de l'icone de l'App
     sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png"))
+    if (!icon.loadFromFile(resourcePath() + "image/icon.png"))
     {
         return EXIT_FAILURE;
     }
@@ -280,7 +280,7 @@ int main(int, char const**)
 
     // Fontes et textes
     sf::Font fipps;
-    if(!fipps.loadFromFile(resourcePath() + "fipps.ttf"))
+    if(!fipps.loadFromFile(resourcePath() + "font/fipps.ttf"))
     {
         return EXIT_FAILURE;
     }
@@ -330,7 +330,7 @@ int main(int, char const**)
     
     // Menu
     sf::Texture t_menu;
-    if(!t_menu.loadFromFile(resourcePath() + "menu.png"))
+    if(!t_menu.loadFromFile(resourcePath() + "image/menu.png"))
     {
         return EXIT_FAILURE;
     }
@@ -340,14 +340,14 @@ int main(int, char const**)
     
     // Texture du ciel
     sf::Texture t_sky;
-    if (!t_sky.loadFromFile(resourcePath() + "sky_16.png"))
+    if (!t_sky.loadFromFile(resourcePath() + "image/sky_16.png"))
     {
         return EXIT_FAILURE;
     }
     
     // Texture et sprite d'arrière plan de pause
     sf::Texture t_pause;
-    if (!t_pause.loadFromFile(resourcePath() + "pause_shade.png"))
+    if (!t_pause.loadFromFile(resourcePath() + "image/pause_shade.png"))
     {
         return EXIT_FAILURE;
     }
@@ -370,17 +370,17 @@ int main(int, char const**)
     
     // Textures de tilesets
     sf::Texture t_tileset;
-    if(!t_tileset.loadFromFile(resourcePath() + "terrain_16.png"))
+    if(!t_tileset.loadFromFile(resourcePath() + "image/terrain_16.png"))
     {
         return EXIT_FAILURE;
     }
     sf::Texture t_plane;
-    if(!t_plane.loadFromFile(resourcePath() + "plane_16.png"))
+    if(!t_plane.loadFromFile(resourcePath() + "image/plane_16.png"))
     {
         return EXIT_FAILURE;
     }
     sf::Texture t_particle;
-    if(!t_particle.loadFromFile(resourcePath() + "particles.png"))
+    if(!t_particle.loadFromFile(resourcePath() + "image/particles.png"))
     {
         return EXIT_FAILURE;
     }
