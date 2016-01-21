@@ -818,7 +818,7 @@ int main(int, char const**)
                         if(playerPos == obstL[i]) // Si on arrive à un obstacle
                         {
                             increaseScore = true; // on va pouvoir incrémenter le score
-                            i = obstL.size(); // et on fait en sorte de quitter le for
+                            i = obstL.size(); // et on fait en sorte de quitter le for (tfw tu relis ton code 3 ans après et que tu découvres que tu savais pas faire un break)
                         }
                     }
                 }
