@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         BUILD_FILES = sh(
-            script: "find ./ -name "*.cpp" | tr '\n' ' '",
+            script: "find ./ -name \"*.cpp\" | tr '\n' ' '",
             returnStdout: true
         )
     }
