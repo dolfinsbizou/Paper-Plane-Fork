@@ -1,0 +1,12 @@
+output/
+paper-plane
+res/score.dat
+*.gcno
+*.gcda
+*.7z
+unit_tests_eclairs.xml
+coverage_eclairs.info
+coverage_eclairs.xml
+.cov/
+.cccc/
+binary_metrics_eclairs.csv
