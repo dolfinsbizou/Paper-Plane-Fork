@@ -25,7 +25,7 @@ public:
     void setPos(int x, int y);
     void setSpeed(int i, int j);
     void move();
-    void setFrame(int i);
+    void setFrame(unsigned int i);
     Tile *getFrame();
     int getFrameId();
     int getIndex();
@@ -35,27 +35,27 @@ public:
 private:
     
     void setupFrames(std::vector<int> const&desc);
+    int m_index; // L'index de l'entité
     sf::Vector2i m_v; // Le vecteur vitesse de l'entité
-    std::vector<sf::Vector2i> m_collisionPoint; // Les coordonnées de collision stockées dans un Vector2i de chaque frame
     int m_x, m_y; // Positions en (x, y) de l'entité
     Tileset *m_ts; // Tileset de l'entité
-    int m_index; // L'index de l'entité
-    std::vector<Tile> m_frames; // vector stockant les frames d'animation de l'entité
     int m_currFrame; //frame actuelle (défaut 1)
+    std::vector<sf::Vector2i> m_collisionPoint; // Les coordonnées de collision stockées dans un Vector2i de chaque frame
+    std::vector<Tile> m_frames; // vector stockant les frames d'animation de l'entité
 };
 
 
-//               __
-//              /  \
-//             /  0 \___
-//             |    ,---'      duck designed by Louis Beltrame
-//             /   /
-// _\_________/   /
-//   \    ___    /
-//    \_________/
-//         ||
-//         \<
-
+/*               __
+ *              /  \
+ *             /  0 \___
+ *             |    ,---'      duck designed by Louis Beltrame
+ *             /   /
+ * _\_________/   /
+ *   \    ___    /
+ *    \_________/
+ *         ||
+ *         \<
+ */
 
 
 

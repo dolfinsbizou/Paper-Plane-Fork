@@ -67,7 +67,7 @@ void Entity::move()
 /*
  * Définit la frame actuelle comme étant la frame d'id i
  */
-void Entity::setFrame(int i)
+void Entity::setFrame(unsigned int i)
 {
     if(i > 0 && i < (m_frames.size() + 1))
     {
@@ -128,7 +128,7 @@ void Entity::setupFrames(std::vector<int> const&desc)
     }
     
     //Maintenant pour chaque case du vector (<=> pour chaque ligne du tileset)
-    for(int i = 0 ; i < desc.size() ; i++)
+    for(unsigned int i = 0 ; i < desc.size() ; i++)
     {
         //Pour chaque case de la ligne i du tileset
         for(int j = 0 ; j < desc[i] ; j++)
