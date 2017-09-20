@@ -29,7 +29,7 @@ ParticleSystem::ParticleSystem(unsigned int qty, sf::Vector2f loc, Tileset &ts, 
     }
     
     //Maintenant pour chaque case du vector (<=> pour chaque ligne du tileset)
-    for(int i = 0 ; i < tsLineDesc.size() ; i++)
+    for(unsigned int i = 0 ; i < tsLineDesc.size() ; i++)
     {
         //Pour chaque case de la ligne i du tileset
         for(int j = 0 ; j < tsLineDesc[i] ; j++)
@@ -47,7 +47,7 @@ ParticleSystem::ParticleSystem(unsigned int qty, sf::Vector2f loc, Tileset &ts, 
  */
 void ParticleSystem::init()
 {
-    for(int i = 0; i < m_particles.size() ; i++)
+    for(unsigned int i = 0; i < m_particles.size() ; i++)
     {
         m_particles[i].p_lifespan = sf::Time::Zero;
         if(m_pType == UNDEAD || m_pType == LIMITED)
@@ -90,7 +90,7 @@ void ParticleSystem::setParticle(int i)
 
 void ParticleSystem::display(sf::RenderWindow &w)
 {
-    for(int i = 0; i < m_particles.size() ; i++)
+    for(unsigned int i = 0; i < m_particles.size() ; i++)
     {
         if((m_pType == MORTAL) || (m_pType == LIMITED && m_particles[i].p_lifespan > sf::Time::Zero) || (m_pType == UNDEAD))
         {
@@ -109,7 +109,7 @@ void ParticleSystem::update(sf::Time timeElapsed)
 {
     unsigned int numFrames = m_frames.size();
     
-    for (int i = 0 ; i < m_particles.size() ; i++)
+    for (unsigned int i = 0 ; i < m_particles.size() ; i++)
     {
         Particle *p = &m_particles[i]; //On récupère l'adresse de la particule n°i
         
@@ -134,7 +134,7 @@ void ParticleSystem::update(sf::Time timeElapsed)
         if(p->p_frameLife <= sf::Time::Zero)
         {
             p->p_frameLife = m_frameLife;
-            if(p->p_frameIndex >= numFrames)
+            if(p->p_frameIndex >= (int)numFrames)
             {
                 p->p_frameIndex = 1;
             }

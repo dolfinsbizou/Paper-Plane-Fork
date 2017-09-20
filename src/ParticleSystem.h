@@ -53,12 +53,12 @@ private:
         int p_frameIndex; // Index de la frame de la particule
     };
     std::vector<Particle> m_particles; // Le tableau stockant les informations des particules
+    pSystem::ParticleType m_pType; //Indique si une particule est undead, c'est à dire si elle ne meurt jamais -> dans ce cas là,
+    sf::Vector2f m_pos; //Position de l'emitter
+    Tileset *m_ts; // L'adresse du tileset du système
     sf::Time m_lifespan; // La durée de vie d'une particule
     sf::Time m_frameLife; // La durée de chaque frame
-    Tileset *m_ts; // L'adresse du tileset du système
     std::vector<Tile> m_frames; // Le tableau de frames
-    sf::Vector2f m_pos; //Position de l'emitter
-    pSystem::ParticleType m_pType; //Indique si une particule est undead, c'est à dire si elle ne meurt jamais -> dans ce cas là,
     
 };
 
