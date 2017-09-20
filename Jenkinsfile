@@ -12,6 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'make clean'
                 //updateGitlabCommitStatus name: 'build', state: 'running'
                 eclairsBuild()
             }
