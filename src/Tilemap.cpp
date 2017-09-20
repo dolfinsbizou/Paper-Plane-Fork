@@ -40,14 +40,14 @@ bool Tilemap::addLine(std::vector<int> const&line)
         {
             vector<int> voidV; //cette ligne est dégueulasse :x
             m_width = line.size();
-            for (int i = 0 ; i < m_width ; i++)
+            for (unsigned int i = 0 ; i < m_width ; i++)
             {
                 m_map.push_back(voidV);
             }
         }
         
         //Puis on ajoute une case à chaque colonne pour faire la ligne
-        for(int i = 0 ; i < line.size() ; i++)
+        for(unsigned int i = 0 ; i < line.size() ; i++)
         {
             m_map[i].push_back(line[i]);
         }
@@ -68,9 +68,9 @@ bool Tilemap::addLine(std::vector<int> const&line)
  */
 void Tilemap::debugDisplayTilemap()
 {
-    for(int i = 0 ; i < m_height ; i++)
+    for(unsigned int i = 0 ; i < m_height ; i++)
     {
-        for(int j = 0 ; j < m_width ; j++)
+        for(unsigned int j = 0 ; j < m_width ; j++)
         {
             cout << m_map[j][i] << "   ";
         }
@@ -83,7 +83,7 @@ void Tilemap::debugDisplayTilemap()
 /*
  * Retourne la largeur en colonnes de la tilemap
  */
-int Tilemap::getWidth()
+unsigned int Tilemap::getWidth()
 {
     return m_width;
 }
@@ -91,7 +91,7 @@ int Tilemap::getWidth()
 /*
  * Retourne la hauteur en lignes de la tilemap
  */
-int Tilemap::getHeight()
+unsigned int Tilemap::getHeight()
 {
     return m_height;
 }

@@ -21,15 +21,15 @@ public:
     Tilemap();
     bool addLine(std::vector<int> const&line);
     void debugDisplayTilemap();
-    int getWidth();
-    int getHeight();
+    unsigned int getWidth();
+    unsigned int getHeight();
     int readPos(int i, int j);
     void clean();
     
 private:
     
     std::vector<std::vector<int>> m_map; // Tableau d'index de tile
-    int m_width, m_height; // Largeur et hauteur actuelle
+    unsigned int m_width, m_height; // Largeur et hauteur actuelle
 };
 
 #endif /* defined(__Paper_Plane__Tilemap__) */
