@@ -26,9 +26,7 @@ pipeline {
     }
     post {
         always {
-            echo "${ENV:BUILD_FILES}"
-            //eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", false, false, true, false, false, false
-            sh 'make clean'
+            eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", false, false, true, false, false, false
         }
         /*
         aborted {
@@ -44,6 +42,7 @@ pipeline {
         //*/
         success {
             eclairsArchive 'tuto'
+            sh 'make clean'
             //updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
