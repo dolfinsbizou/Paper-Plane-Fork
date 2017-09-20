@@ -42,7 +42,6 @@ pipeline {
         //*/
         success {
             eclairsArchive 'tuto'
-            sh 'make clean'
             //updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
