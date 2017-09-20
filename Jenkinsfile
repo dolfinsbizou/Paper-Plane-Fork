@@ -42,7 +42,7 @@ pipeline {
         }
         //*/
         success {
-            eclairsArchive 'tuto'
+            eclairsArchive 'paper-plane'
             //updateGitlabCommitStatus name: 'build', state: 'success'
         }
     }
