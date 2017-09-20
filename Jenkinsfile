@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh """find ./ -name *.cpp | tr \\\\n \\\' \\\'"""
+                sh """find ./ -name *.cpp | tr \\\\n \\\\' \\\\'"""
                 //updateGitlabCommitStatus name: 'build', state: 'running'
                 //eclairsBuild()
             }
