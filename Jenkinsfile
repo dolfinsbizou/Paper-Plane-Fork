@@ -10,14 +10,13 @@ pipeline {
     }
 
     stages {
-        /*
         stage('Build') {
             steps {
+                echo "${ENV:BUILD_FILES}"
                 //updateGitlabCommitStatus name: 'build', state: 'running'
                 eclairsBuild()
             }
         }
-        //*/
         /*
         stage('Test') {
             steps {
@@ -30,7 +29,7 @@ pipeline {
         always {
             echo "${ENV:BUILD_FILES}"
             //eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", false, false, true, false, false, false
-            //sh 'make clean'
+            sh 'make clean'
         }
         /*
         aborted {
