@@ -536,7 +536,7 @@ int main(int, char const**)
                         case sf::Keyboard::Right: // Flèche droite
                             if(isPaused)
                             {
-                                if(activeButton >= NB_BUTTON-1)
+                                if(activeButton >= (int)NB_BUTTON-1)
                                 {
                                     activeButton = 0;
                                 }
@@ -608,7 +608,7 @@ int main(int, char const**)
                                 }
                                 break;
                             case sf::Keyboard::Down: // Flèche bas
-                                if(menuButton >= NB_MENU-1)
+                                if(menuButton >= (int)NB_MENU-1)
                                 {
                                     menuButton = 0;
                                 }
@@ -813,7 +813,7 @@ int main(int, char const**)
                 if(playerPos != lastPlayerPos)
                 {
                     vector<int> obstL = physicGenerator.getObstacleVector(); // Récupère chaque ligne contenant un obstacle
-                    for(int i = 0 ; i < obstL.size() ; i++)
+                    for(unsigned int i = 0 ; i < obstL.size() ; i++)
                     {
                         if(playerPos == obstL[i]) // Si on arrive à un obstacle
                         {
