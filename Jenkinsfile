@@ -20,14 +20,14 @@ pipeline {
         /*
         stage('Test') {
             steps {
-                eclairsTest 'tests', 'out/tests', ''
+                eclairsTest 'tests', 'tests', ''
             }
         }
         //*/
     }
     post {
         always {
-            eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", true, false, true, false, false, false
+            eclairsReport 'paper-plane', "${ENV:BUILD_FILES}", true, false, true, false, false, false
         }
         /*
         aborted {
