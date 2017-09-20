@@ -1,9 +1,11 @@
+
+FILES = sh(
+    script: 'find ./ -name "*.cpp"',
+    returnStdout: true
+)
+
 pipeline {
     agent any
-    FILES = sh(
-        script: 'find ./ -name "*.cpp"',
-        returnStdout: true
-    )
 
     stages {
         stage('Build') {
