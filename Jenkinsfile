@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "${ENV:BUILD_FILES}"
+                sh 'find ./ -name "*.cpp"'
                 //updateGitlabCommitStatus name: 'build', state: 'running'
                 eclairsBuild()
             }
