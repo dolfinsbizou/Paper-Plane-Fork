@@ -25,9 +25,9 @@ public:
     
 private:
     
+    int m_index; // L'index du Tile
     Tileset *m_tileset; // Le tileset utilisé
     sf::Sprite m_tile; // Le sprite du Tile
-    int m_index; // L'index du Tile
 };
 
 #endif /* defined(__Paper_Plane__Tile__) */
