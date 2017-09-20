@@ -25,7 +25,7 @@ pipeline {
     }
     post {
         always {
-            echo ${FILES}
+            echo "${ENV:BUILD_FILES}"
             eclairsReport 'out/tuto', ${ENV:BUILD_FILES}, false, false, true, false, false, false
             sh 'make clean'
         }
