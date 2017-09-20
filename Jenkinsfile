@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 //updateGitlabCommitStatus name: 'build', state: 'running'
-                //eclairsBuild()
+                eclairsBuild()
             }
         }
         /*
