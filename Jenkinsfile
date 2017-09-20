@@ -4,7 +4,7 @@ pipeline {
     environment {
         BUILD_FILES = sh(
             // The fuck is this insanity? https://gist.github.com/Faheetah/e11bd0315c34ed32e681616e41279ef4
-            script: 'find ./ -name \\"*.cpp\\" | tr \\"\\\\\\n\\" \\" \\"',
+            script: 'sh tempo.sh',
             returnStdout: true
         )
     }
@@ -12,8 +12,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //sh """find ./ -name *.cpp | tr \\\\n \\\\' \\\\'"""
-                eclairsBordel()
                 //updateGitlabCommitStatus name: 'build', state: 'running'
                 //eclairsBuild()
             }
