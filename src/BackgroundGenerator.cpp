@@ -209,7 +209,7 @@ std::vector<int> BackgroundGenerator::getCurrLine()
     vector<int> currLine;
     if (m_currLine > 0)
     {
-        for (int i = 0 ; i < m_tm.getWidth() ; i++)
+        for (unsigned int i = 0 ; i < m_tm.getWidth() ; i++)
         {
             currLine.push_back(m_tm.readPos(i, m_currLine - 1));
         }
