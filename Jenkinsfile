@@ -27,7 +27,7 @@ pipeline {
     }
     post {
         always {
-            eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", false, false, true, false, false, false
+            eclairsReport 'out/tuto', "${ENV:BUILD_FILES}", true, false, true, false, false, false
         }
         /*
         aborted {
