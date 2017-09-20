@@ -1,11 +1,12 @@
-
-FILES = sh(
-    script: 'find ./ -name "*.cpp"',
-    returnStdout: true
-)
-
 pipeline {
     agent any
+
+    environment {
+        BUILD_FILES = sh(
+            script: 'find ./ -name "*.cpp"',
+            returnStdout: true
+        )
+    }
 
     stages {
         stage('Build') {
@@ -25,7 +26,7 @@ pipeline {
     post {
         always {
             echo ${FILES}
-            eclairsReport 'out/tuto', ${FILES}, false, false, true, false, false, false
+            eclairsReport 'out/tuto', ${ENV:BUILD_FILES}, false, false, true, false, false, false
             sh 'make clean'
         }
         /*
